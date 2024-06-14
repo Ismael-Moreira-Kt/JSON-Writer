@@ -33,4 +33,18 @@ fn main() {
 
     println!("Enter the author:");
     io::stdin().read_line(&mut article.author).expect("Failed to read line");
+
+    loop {
+        println!("Enter a paragraph (or 0 to finish):");
+        let mut paragraph = String::new();
+        io::stdin().read_line(&mut paragraph).expect("Failed to read line");
+
+        if paragraph.trim() == "0" {
+            break;
+        }
+
+        article.paragraphs.push(Paragraph {
+            name: paragraph.trim().to_string(),
+        });
+    }
 }
