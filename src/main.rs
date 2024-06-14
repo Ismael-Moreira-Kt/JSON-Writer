@@ -27,4 +27,10 @@ fn main() {
         author: String::new(),
         paragraphs: Vec::new(),
     };
+
+    println!("Enter the article:");
+    io::stdin().read_line(&mut article.article).expect("Failed to read line");
+
+    println!("Enter the author:");
+    io::stdin().read_line(&mut article.author).expect("Failed to read line");
 }
