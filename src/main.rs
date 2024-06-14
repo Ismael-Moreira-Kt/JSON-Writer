@@ -47,4 +47,8 @@ fn main() {
             name: paragraph.trim().to_string(),
         });
     }
+
+    let article_json = serde_json::to_string(&article).expect("Failed to serialize article");
+    let json_filename = "article.json";
+
 }
