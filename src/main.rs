@@ -53,4 +53,6 @@ fn main() {
 
     let mut file = File::create(json_filename).expect("Failed to create file");
     file.write_all(article_json.as_bytes()).expect("Failed to write to file");
+
+    println!("Article data written to {}.", json_filename);
 }
