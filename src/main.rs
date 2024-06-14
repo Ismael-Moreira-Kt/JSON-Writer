@@ -18,3 +18,13 @@ struct Article {
     author: String,
     paragraphs: Vec<Paragraph>, // Corrected field name
 }
+
+
+
+fn main() {
+    let mut article = Article {
+        article: String::new(),
+        author: String::new(),
+        paragraphs: Vec::new(),
+    };
+}
