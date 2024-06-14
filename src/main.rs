@@ -51,4 +51,6 @@ fn main() {
     let article_json = serde_json::to_string(&article).expect("Failed to serialize article");
     let json_filename = "article.json";
 
+    let mut file = File::create(json_filename).expect("Failed to create file");
+    file.write_all(article_json.as_bytes()).expect("Failed to write to file");
 }
